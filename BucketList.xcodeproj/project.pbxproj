@@ -11,6 +11,11 @@
 		B8E2155A2992C8EA0052BAC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E215592992C8EA0052BAC0 /* ContentView.swift */; };
 		B8E2155C2992C8EC0052BAC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8E2155B2992C8EC0052BAC0 /* Assets.xcassets */; };
 		B8E2155F2992C8EC0052BAC0 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8E2155E2992C8EC0052BAC0 /* Preview Assets.xcassets */; };
+		B8E215662992F8C80052BAC0 /* FileManager-UserDocumentsDirectory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E215652992F8C80052BAC0 /* FileManager-UserDocumentsDirectory.swift */; };
+		B8E50AE92993B3BA00B8FADC /* Location.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E50AE82993B3BA00B8FADC /* Location.swift */; };
+		B8E50AEB2993C04900B8FADC /* EditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E50AEA2993C04900B8FADC /* EditView.swift */; };
+		B8E50AED2993EC7D00B8FADC /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E50AEC2993EC7D00B8FADC /* Result.swift */; };
+		B8E50AEF2993F8E100B8FADC /* ContentView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E50AEE2993F8E100B8FADC /* ContentView-ViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +24,11 @@
 		B8E215592992C8EA0052BAC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		B8E2155B2992C8EC0052BAC0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		B8E2155E2992C8EC0052BAC0 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		B8E215652992F8C80052BAC0 /* FileManager-UserDocumentsDirectory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "FileManager-UserDocumentsDirectory.swift"; sourceTree = "<group>"; };
+		B8E50AE82993B3BA00B8FADC /* Location.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Location.swift; sourceTree = "<group>"; };
+		B8E50AEA2993C04900B8FADC /* EditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditView.swift; sourceTree = "<group>"; };
+		B8E50AEC2993EC7D00B8FADC /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		B8E50AEE2993F8E100B8FADC /* ContentView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ContentView-ViewModel.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -51,8 +61,13 @@
 		B8E215562992C8EA0052BAC0 /* BucketList */ = {
 			isa = PBXGroup;
 			children = (
+				B8E215652992F8C80052BAC0 /* FileManager-UserDocumentsDirectory.swift */,
 				B8E215572992C8EA0052BAC0 /* BucketListApp.swift */,
 				B8E215592992C8EA0052BAC0 /* ContentView.swift */,
+				B8E50AEE2993F8E100B8FADC /* ContentView-ViewModel.swift */,
+				B8E50AEA2993C04900B8FADC /* EditView.swift */,
+				B8E50AE82993B3BA00B8FADC /* Location.swift */,
+				B8E50AEC2993EC7D00B8FADC /* Result.swift */,
 				B8E2155B2992C8EC0052BAC0 /* Assets.xcassets */,
 				B8E2155D2992C8EC0052BAC0 /* Preview Content */,
 			);
@@ -137,8 +152,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B8E50AED2993EC7D00B8FADC /* Result.swift in Sources */,
 				B8E2155A2992C8EA0052BAC0 /* ContentView.swift in Sources */,
+				B8E50AEB2993C04900B8FADC /* EditView.swift in Sources */,
 				B8E215582992C8EA0052BAC0 /* BucketListApp.swift in Sources */,
+				B8E50AE92993B3BA00B8FADC /* Location.swift in Sources */,
+				B8E50AEF2993F8E100B8FADC /* ContentView-ViewModel.swift in Sources */,
+				B8E215662992F8C80052BAC0 /* FileManager-UserDocumentsDirectory.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -270,6 +290,7 @@
 				DEVELOPMENT_TEAM = 8X7MLERU8X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -299,6 +320,7 @@
 				DEVELOPMENT_TEAM = 8X7MLERU8X;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSFaceIDUsageDescription = "We need to unlock your data.";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
