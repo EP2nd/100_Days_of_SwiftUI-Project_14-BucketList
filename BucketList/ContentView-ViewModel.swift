@@ -5,17 +5,22 @@
 //  Created by Edwin Przeźwiecki Jr. on 08/02/2023.
 //
 
-import Foundation
 import LocalAuthentication
 import MapKit
 
 extension ContentView {
+    
     @MainActor class ViewModel: ObservableObject {
         
         @Published var mapRegion = MKCoordinateRegion(center: CLLocationCoordinate2D(latitude: 50, longitude: 0), span: MKCoordinateSpan(latitudeDelta: 25, longitudeDelta: 25))
+        
         @Published private(set) var locations: [Location]
         @Published var selectedPlace: Location?
+        
         @Published var isUnlocked = false
+        /// Challenge 2:
+        @Published var authenticationFailed = false
+        @Published var errorMessage: String = "Authentication error"
         
         let savePath = FileManager.documentsDirectory.appendingPathComponent("SavedPlaces")
         
@@ -61,18 +66,23 @@ extension ContentView {
                 
                 context.evaluatePolicy(.deviceOwnerAuthenticationWithBiometrics, localizedReason: reason) { success, authenticationError in
                     
-                    if success {
-                        Task { @MainActor in
-//                            await MainActor.run {
-                                self.isUnlocked = true
-//                            }
+                    /// Challenge 2:
+                    Task { @MainActor in
+                        if success {
+                            // await MainActor.run {
+                            self.isUnlocked = true
+                            // }
+                        } else {
+                            self.errorMessage = "We could not authenticate you.\nPlease try again."
+                            self.authenticationFailed = true
                         }
-                    } else {
-                        /// Error.
                     }
                 }
             } else {
-                /// No biometrics.
+                Task { @MainActor in
+                    self.errorMessage = "Your device does not support biometric authentication."
+                    self.authenticationFailed = true
+                }
             }
         }
     }

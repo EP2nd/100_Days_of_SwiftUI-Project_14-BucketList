@@ -16,6 +16,7 @@ struct Query: Codable {
 }
 
 struct Page: Codable, Comparable {
+    
     let pageid: Int
     let title: String
     let terms: [String: [String]]?

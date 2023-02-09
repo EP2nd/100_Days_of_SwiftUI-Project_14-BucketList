@@ -46,17 +46,18 @@ struct ContentView: View {
                     HStack {
                         Spacer()
                         
+                        /// Challenge 1:
                         Button {
                             viewModel.addLocation()
                         } label: {
                             Image(systemName: "plus")
+                                .padding()
+                                .background(.black.opacity(0.75))
+                                .foregroundColor(.white)
+                                .font(.title)
+                                .clipShape(Circle())
+                                .padding(.trailing)
                         }
-                        .padding()
-                        .background(.black.opacity(0.75))
-                        .foregroundColor(.white)
-                        .font(.title)
-                        .clipShape(Circle())
-                        .padding(.trailing)
                     }
                 }
             }
@@ -80,6 +81,12 @@ struct ContentView: View {
             .background(.blue)
             .foregroundColor(.white)
             .clipShape(Capsule())
+            /// Challenge 2:
+            .alert("Authentication error", isPresented: $viewModel.authenticationFailed) {
+                Button("OK") { }
+            } message: {
+                Text(viewModel.errorMessage)
+            }
         }
     }
 }

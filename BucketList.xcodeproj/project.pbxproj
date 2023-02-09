@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		B81B5E1829952A4700D3F9AE /* EditView-ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B81B5E1729952A4700D3F9AE /* EditView-ViewModel.swift */; };
 		B8E215582992C8EA0052BAC0 /* BucketListApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E215572992C8EA0052BAC0 /* BucketListApp.swift */; };
 		B8E2155A2992C8EA0052BAC0 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8E215592992C8EA0052BAC0 /* ContentView.swift */; };
 		B8E2155C2992C8EC0052BAC0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B8E2155B2992C8EC0052BAC0 /* Assets.xcassets */; };
@@ -19,6 +20,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		B81B5E1729952A4700D3F9AE /* EditView-ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "EditView-ViewModel.swift"; sourceTree = "<group>"; };
 		B8E215542992C8E90052BAC0 /* BucketList.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BucketList.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B8E215572992C8EA0052BAC0 /* BucketListApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BucketListApp.swift; sourceTree = "<group>"; };
 		B8E215592992C8EA0052BAC0 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -42,6 +44,41 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		B81B5E1B29959F2600D3F9AE /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				B8E215652992F8C80052BAC0 /* FileManager-UserDocumentsDirectory.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
+		B81B5E1C29959F3E00D3F9AE /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				B8E215592992C8EA0052BAC0 /* ContentView.swift */,
+				B8E50AEA2993C04900B8FADC /* EditView.swift */,
+			);
+			name = Views;
+			sourceTree = "<group>";
+		};
+		B81B5E1D29959F6600D3F9AE /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				B8E50AEE2993F8E100B8FADC /* ContentView-ViewModel.swift */,
+				B81B5E1729952A4700D3F9AE /* EditView-ViewModel.swift */,
+			);
+			name = "View Models";
+			sourceTree = "<group>";
+		};
+		B81B5E1E29959F8E00D3F9AE /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+				B8E50AE82993B3BA00B8FADC /* Location.swift */,
+				B8E50AEC2993EC7D00B8FADC /* Result.swift */,
+			);
+			name = Objects;
+			sourceTree = "<group>";
+		};
 		B8E2154B2992C8E90052BAC0 = {
 			isa = PBXGroup;
 			children = (
@@ -61,13 +98,11 @@
 		B8E215562992C8EA0052BAC0 /* BucketList */ = {
 			isa = PBXGroup;
 			children = (
-				B8E215652992F8C80052BAC0 /* FileManager-UserDocumentsDirectory.swift */,
 				B8E215572992C8EA0052BAC0 /* BucketListApp.swift */,
-				B8E215592992C8EA0052BAC0 /* ContentView.swift */,
-				B8E50AEE2993F8E100B8FADC /* ContentView-ViewModel.swift */,
-				B8E50AEA2993C04900B8FADC /* EditView.swift */,
-				B8E50AE82993B3BA00B8FADC /* Location.swift */,
-				B8E50AEC2993EC7D00B8FADC /* Result.swift */,
+				B81B5E1B29959F2600D3F9AE /* Extensions */,
+				B81B5E1D29959F6600D3F9AE /* View Models */,
+				B81B5E1C29959F3E00D3F9AE /* Views */,
+				B81B5E1E29959F8E00D3F9AE /* Objects */,
 				B8E2155B2992C8EC0052BAC0 /* Assets.xcassets */,
 				B8E2155D2992C8EC0052BAC0 /* Preview Content */,
 			);
@@ -157,6 +192,7 @@
 				B8E50AEB2993C04900B8FADC /* EditView.swift in Sources */,
 				B8E215582992C8EA0052BAC0 /* BucketListApp.swift in Sources */,
 				B8E50AE92993B3BA00B8FADC /* Location.swift in Sources */,
+				B81B5E1829952A4700D3F9AE /* EditView-ViewModel.swift in Sources */,
 				B8E50AEF2993F8E100B8FADC /* ContentView-ViewModel.swift in Sources */,
 				B8E215662992F8C80052BAC0 /* FileManager-UserDocumentsDirectory.swift in Sources */,
 			);
